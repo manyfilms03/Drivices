@@ -16,6 +16,8 @@ return new class extends Migration
             $table->foreignId('servico_id')->constrained();
             $table->string('forma_pagamento');
             $table->string('forma_pagamento2')->nullable();
+            $table->timestamps();
+            
         });
     }
 

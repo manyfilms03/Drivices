@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('notifications', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('usuario_id');
+            $table->foreignId('user_id');
             $table->date('data_envio');
             $table->string('tipo');
             $table->string('titulo');
@@ -21,6 +21,8 @@ return new class extends Migration
             $table->string('status');
             $table->date('visto_em')->nullable();
             $table->string('link')->nullable();
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 

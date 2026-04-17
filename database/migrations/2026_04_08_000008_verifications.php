@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('status');
             $table->string('verificador');
             $table->string('observacoes');
+            $table->timestamps();
+            
         });
     }
 

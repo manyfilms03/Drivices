@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('ensino');
             $table->string('cursos')->nullable();
             $table->string('experiencia')->nullable();
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 

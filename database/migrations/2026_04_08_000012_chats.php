@@ -13,12 +13,14 @@ return new class extends Migration
     {
         Schema::create('chats', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('usuario_id')->constrained();
+            $table->foreignId('user_id')->constrained();
             $table->foreignId('professional_id')->constrained();
             $table->string('titulo');
             $table->string('mensagem');
             $table->string('visualizado')->nullable();
             $table->string('anexos')->nullable();
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 

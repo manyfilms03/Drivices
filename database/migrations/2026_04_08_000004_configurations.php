@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('manutencao_status');
             $table->string('manutencao_mensagem');
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 

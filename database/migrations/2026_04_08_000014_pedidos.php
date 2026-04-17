@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('pedidos', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('usuario_id')->constrained();
-            $table->foreignId('cupon_id')->constrained();
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('cupon_id')->nullable()->constrained();
             $table->decimal('orcamento', 10, 2);
             $table->string('descricao');
             $table->string('foto');
@@ -22,6 +22,8 @@ return new class extends Migration
             $table->string('disponibilidade');
             $table->date('data_preferida');
             $table->string('status');
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 

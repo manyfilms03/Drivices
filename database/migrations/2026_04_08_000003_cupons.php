@@ -17,6 +17,8 @@ return new class extends Migration
             $table->integer('desconto_porcentagem')->nullable();
             $table->integer('desconto_inteiro')->nullable();
             $table->date('expiracao');
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 

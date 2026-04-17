@@ -13,10 +13,12 @@ return new class extends Migration
     {
         Schema::create('professionals', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('usuario_id')->constrained();
+            $table->foreignId('user_id')->constrained();
             $table->string('biografia');
             $table->decimal('nota', 10 ,1);
             $table->integer('stripe');
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 

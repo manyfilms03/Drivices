@@ -13,11 +13,13 @@ return new class extends Migration
     {
         Schema::create('denuncias', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('usuario_id')->constrained();
-            $table->foreignId('denunciado_id')->constrained('usuarios', 'id');
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('denunciado_id')->constrained('users', 'id');
             $table->string('categoria');
             $table->string('motivo');
             $table->string('comentario');
+            $table->timestamps();
+            
         });
     }
 

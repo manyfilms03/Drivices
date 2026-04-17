@@ -13,12 +13,14 @@ return new class extends Migration
     {
         Schema::create('servicos', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('usuario_id')->constrained();
+            $table->foreignId('pedido_id')->constrained();
             $table->foreignId('oferta_id')->constrained();
             $table->text('status');
             $table->date('confirmacao');
             $table->date('realizacao');
             $table->date('finalizacao');
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 

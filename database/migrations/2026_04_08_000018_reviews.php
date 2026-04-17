@@ -16,6 +16,8 @@ return new class extends Migration
             $table->foreignId('servico_id')->constrained();
             $table->decimal('nota', 10, 1);
             $table->string('comentario')->nullable();
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 

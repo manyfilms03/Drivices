@@ -23,6 +23,8 @@ return new class extends Migration
             $table->string('validacao_cliente')->nullable();
             $table->string('foto_antes');
             $table->string('foto_depois');
+            $table->timestamps();
+            
         });
     }
 
