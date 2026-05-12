@@ -1,7 +1,7 @@
 # 🚀 Drivices - Marketplace de Serviços Profissionais
 
 
-# Integrantes: Caio Ferroni Vilela; Lucas de França Luz; Arthur Vinicius de Souza Barbosa; João Paulo Santos Nascimento.
+# Integrantes: Caio Ferroni Vilela; Lucas de França Luz; Arthur Vinicius de Souza Barbosa; João Paulo Santos do Nascimento.
 
 
 ## 📋 Descrição do Projeto
